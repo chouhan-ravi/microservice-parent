@@ -64,6 +64,18 @@ Help: https://www.appsdeveloperblog.com/how-to-start-mysql-in-docker-container/
 
 exampe - $ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=order-service -e MYSQL_USER=mysql -e MYSQL_PASSWORD=mysql -e MYSQL_ROOT_HOST=localhost -d mysql
 
+### create docker images through mvn command
+```dockerfile
+mvn clean compile jib:build
+```
+Note: This above command create docker image and push to your docker hub repository
+
+
+### Run all microservice in single docker command
+
+```dockerfile
+docker compose up -d
+```
 
 ## OAuth2.0 setup in Postman
 
